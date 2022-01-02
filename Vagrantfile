@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "master" do |master|
     master.vm.box = "centos/7"
     master.vm.hostname = "master"
-    master.vm.network "private_network", ip: "192.168.56.10"
+    master.vm.network "private_network", ip: "192.168.56.100"
     master.vm.provider "vmware_desktop" do |vm|
       vm.vmx["memsize"] = "4096"
       vm.vmx["numvcpus"] = "2"
